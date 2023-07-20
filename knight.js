@@ -1,10 +1,4 @@
-// Build a knight factory and a gameboard factory
-
-const knightFactory = (x, y) => {
-  let position = [x, y];
-  const getPosition = () => position;
-  return { getPosition };
-};
+// Build a gameboard factory
 
 const gameBoardFactory = () => {
   // Create a gameboard that will store all chess squares with all possible knight moves.
@@ -105,8 +99,8 @@ function addKnightMoves(board) {
   }
 }
 
-const board = gameBoardFactory();
-// console.log(board.getGameBoard());
-board.knightMoves("0,0", "2,7");
+// Script
 
-// Make knightMoves that moves the knight from his started position to an end position in the shortest possible way.
+const board = gameBoardFactory();
+board.knightMoves("0,0", "2,7"); // Return all the shortest path from start to end.
+board.knightMoves("5,3", "4,7"); // Return all the shortest path from start to end.
